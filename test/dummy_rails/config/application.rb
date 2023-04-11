@@ -12,7 +12,7 @@ end
 
 require 'slim-rails'
 require 'jquery-rails'
-require 'dartsass-sprockets'
+# require 'dartsass-sprockets'
 require 'bootstrap-sass'
 require 'uglifier'
 

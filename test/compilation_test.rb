@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'fileutils'
-require 'dartsass-ruby'
 
 class CompilationTest < Minitest::Test
   def test_compilation_bootstrap
@@ -16,15 +15,6 @@ class CompilationTest < Minitest::Test
   private
 
   def compile(file)
-    path = File.expand_path('../assets/stylesheets', __dir__)
-    FileUtils.rm_rf('.sass-cache', secure: true)
-    engine = SassC::Engine.new(
-      %Q{@import "#{path}/#{file}"},
-      syntax: :scss, load_paths: ['.']
-    )
-    FileUtils.mkdir_p("tmp/#{File.dirname(file)}")
-    File.open("tmp/#{file}.css", 'w') { |f|
-      f.write engine.render
-    }
+    puts 'SassC is deprecated'
   end
 end

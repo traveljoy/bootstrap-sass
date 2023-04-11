@@ -44,13 +44,7 @@ end
 
 desc 'Dumps output to a CSS file for testing'
 task :debug do
-  require 'dartsass-ruby'
-  require 'bootstrap-sass'
-  path = Bootstrap.stylesheets_path
-  %w(_bootstrap).each do |file|
-    engine = SassC::Engine.new(File.read("#{path}/#{file}.scss"), syntax: :scss, load_paths: ['.', path])
-    File.open("tmp/#{file}.css", 'w') { |f| f.write(engine.render) }
-  end
+  puts 'SassC is deprecated'
 end
 
 desc 'Convert bootstrap to bootstrap-sass'
@@ -67,21 +61,7 @@ end
 
 desc 'Compile bootstrap-sass to tmp/ (or first arg)'
 task :compile, :css_path do |t, args|
-  require 'dartsass-ruby'
-  require 'bootstrap-sass'
-  require 'term/ansicolor'
-
-  path = 'assets/stylesheets'
-  css_path = args.with_defaults(css_path: 'tmp')[:css_path]
-  puts Term::ANSIColor.bold "Compiling SCSS in #{path}"
-  Dir.mkdir(css_path) unless File.directory?(css_path)
-  %w(_bootstrap bootstrap/_theme).each do |file|
-    save_path = "#{css_path}/#{file.sub(/(^|\/)?_+/, '\1').sub('/', '-')}.css"
-    puts Term::ANSIColor.cyan("  #{save_path}") + '...'
-    engine = SassC::Engine.new(File.read("#{path}/#{file}.scss"), syntax: :scss, load_paths: ['.', path])
-    css = engine.render
-    File.open(save_path, 'w') { |f| f.write css }
-  end
+  puts 'SassC is deprecated'
 end
 
 desc 'Start a dummy (test) Rails app server'
