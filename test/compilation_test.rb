@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'fileutils'
-require 'sassc'
+require 'dartsass-ruby'
 
 class CompilationTest < Minitest::Test
   def test_compilation_bootstrap

@@ -12,7 +12,7 @@ end
 
 require 'slim-rails'
 require 'jquery-rails'
-require 'sassc-rails'
+require 'dartsass-sprockets'
 require 'bootstrap-sass'
 require 'uglifier'
 
@@ -28,4 +28,3 @@ module Dummy
     end
   end
 end
-

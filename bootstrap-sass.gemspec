@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/twbs/bootstrap-sass'
   s.license  = 'MIT'
 
-  s.add_runtime_dependency 'sassc', '>= 2.0.0'
+  s.add_runtime_dependency 'dartsass-ruby', '~> 3.0'
   s.add_runtime_dependency 'autoprefixer-rails', '>= 5.2.1'
 
   # Testing dependencies
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara', '~> 3.6'
   s.add_development_dependency 'poltergeist'
   # Dummy Rails app dependencies
-  s.add_development_dependency 'sassc-rails', '>= 2.0.0'
+  s.add_development_dependency 'dartsass-sprockets', '~> 3.0'
   s.add_development_dependency 'actionpack', '>= 4.1.5'
   s.add_development_dependency 'activesupport', '>= 4.1.5'
   s.add_development_dependency 'json', '>= 1.8.1'

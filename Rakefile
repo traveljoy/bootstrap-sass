@@ -44,7 +44,7 @@ end
 
 desc 'Dumps output to a CSS file for testing'
 task :debug do
-  require 'sassc'
+  require 'dartsass-ruby'
   require 'bootstrap-sass'
   path = Bootstrap.stylesheets_path
   %w(_bootstrap).each do |file|
@@ -67,7 +67,7 @@ end
 
 desc 'Compile bootstrap-sass to tmp/ (or first arg)'
 task :compile, :css_path do |t, args|
-  require 'sassc'
+  require 'dartsass-ruby'
   require 'bootstrap-sass'
   require 'term/ansicolor'
 

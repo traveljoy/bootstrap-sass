@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'sassc'
+require 'dartsass-ruby'
 require 'bootstrap-sass'
 require 'fileutils'
 
